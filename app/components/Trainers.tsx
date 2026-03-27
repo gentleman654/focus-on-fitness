@@ -21,13 +21,13 @@ interface Trainer {
 
 const TRAINERS: Trainer[] = [
   {
-    name: "Arjun Mehta",
+    name: "Ashutosh",
     speciality: "Strength & Powerlifting",
     experience: "8 years",
     image: "/trainer-1.png",
   },
   {
-    name: "Vikram Singh",
+    name: "Raghav",
     speciality: "Bodybuilding & Nutrition",
     experience: "6 years",
     image: "/trainer-2.png",
