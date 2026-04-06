@@ -40,7 +40,7 @@ const PLANS: Plan[] = [
     name: "Quarterly",
     duration: "3 Months",
     originalPrice: "₹5,000",
-    price: "₹4,000",
+    price: "₹3,999",
     perMonth: "₹1,333/mo",
     discount: "20% OFF",
     features: [
@@ -55,7 +55,7 @@ const PLANS: Plan[] = [
     name: "Annual",
     duration: "12 Months",
     originalPrice: "₹15,000",
-    price: "₹10,000",
+    price: "₹9,999",
     perMonth: "₹833/mo",
     discount: "33% OFF",
     features: [
@@ -90,11 +90,10 @@ export default function Pricing() {
           {PLANS.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 ${
-                plan.popular
+              className={`relative rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 ${plan.popular
                   ? "bg-bg-elevated border-2 border-accent shadow-lg shadow-accent/10"
                   : "glass"
-              }`}
+                }`}
             >
               {/* Popular Badge */}
               {plan.popular && (
@@ -159,11 +158,10 @@ export default function Pricing() {
                 href={SITE_CONFIG.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-center font-semibold py-3 rounded-full transition-all duration-200 ${
-                  plan.popular
+                className={`text-center font-semibold py-3 rounded-full transition-all duration-200 ${plan.popular
                     ? "bg-accent text-bg-primary hover:bg-accent-hover"
                     : "border border-border text-text-primary hover:border-accent hover:text-accent"
-                }`}
+                  }`}
               >
                 Get Started
               </a>
