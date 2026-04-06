@@ -13,8 +13,10 @@ import { SITE_CONFIG } from "@/app/config";
 interface Plan {
   name: string;
   duration: string;
+  originalPrice: string;
   price: string;
   perMonth: string;
+  discount: string;
   features: string[];
   popular?: boolean;
 }
@@ -23,8 +25,10 @@ const PLANS: Plan[] = [
   {
     name: "Monthly",
     duration: "1 Month",
+    originalPrice: "₹2,000",
     price: "₹1,500",
     perMonth: "₹1,500/mo",
+    discount: "25% OFF",
     features: [
       "Full gym access",
       "All equipment",
@@ -35,8 +39,10 @@ const PLANS: Plan[] = [
   {
     name: "Quarterly",
     duration: "3 Months",
-    price: "₹3,600",
-    perMonth: "₹1,200/mo",
+    originalPrice: "₹5,000",
+    price: "₹4,000",
+    perMonth: "₹1,333/mo",
+    discount: "20% OFF",
     features: [
       "Everything in Monthly",
       "1 free personal training session",
@@ -48,8 +54,10 @@ const PLANS: Plan[] = [
   {
     name: "Annual",
     duration: "12 Months",
-    price: "₹10,800",
-    perMonth: "₹900/mo",
+    originalPrice: "₹15,000",
+    price: "₹10,000",
+    perMonth: "₹833/mo",
+    discount: "33% OFF",
     features: [
       "Everything in Quarterly",
       "4 free PT sessions",
@@ -74,7 +82,7 @@ export default function Pricing() {
         </h2>
 
         <p className="text-text-secondary text-lg mb-16 max-w-lg">
-          No hidden fees. No contracts. Just results.
+          No hidden fees. No contracts. <span className="text-green-400 font-semibold">Limited-time discounts</span> on all plans!
         </p>
 
         {/* Plan Cards */}
@@ -101,7 +109,17 @@ export default function Pricing() {
               <h3 className="text-lg font-semibold mb-1">{plan.name}</h3>
               <p className="text-text-muted text-sm mb-6">{plan.duration}</p>
 
+              {/* Discount Badge */}
+              <div className="mb-4">
+                <span className="inline-block bg-green-500/15 text-green-400 text-xs font-bold px-3 py-1 rounded-full tracking-wider border border-green-500/20">
+                  {plan.discount}
+                </span>
+              </div>
+
               {/* Price */}
+              <p className="text-text-muted text-lg line-through mb-1">
+                {plan.originalPrice}
+              </p>
               <p className="text-4xl font-bold mb-1">
                 {plan.popular ? (
                   <span className="text-gradient-gold">{plan.price}</span>
