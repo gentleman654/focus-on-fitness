@@ -57,7 +57,7 @@ export default function Location() {
               <div className="space-y-2">
                 {[
                   { day: "Monday – Saturday", time: "6:00 AM – 10:00 PM" },
-                  { day: "Sunday", time: "7:00 AM – 1:00 PM" },
+
                 ].map((schedule) => (
                   <div
                     key={schedule.day}
