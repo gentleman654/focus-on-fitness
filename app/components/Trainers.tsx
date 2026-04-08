@@ -33,7 +33,7 @@ const TRAINERS: Trainer[] = [
     image: "/trainer-2.png",
   },
   {
-    name: "Priya Sharma",
+    name: "Meenakshi",
     speciality: "Functional Training & HIIT",
     experience: "5 years",
     image: "/trainer-3.png",
