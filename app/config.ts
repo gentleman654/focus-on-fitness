@@ -18,7 +18,8 @@ export const SITE_CONFIG = {
   // Contact
   phone: "9797601900",
   phoneFormatted: "+91 9797601900",
-  whatsappUrl: "https://wa.me/919797601900",
+  whatsappUrl:
+    "https://wa.me/919797601900?text=Hi%20Focus%20on%20Fitness!%20I%27m%20interested%20in%20joining%20the%20gym.%20Please%20share%20the%20details.",
 
   // Location
   address: {
